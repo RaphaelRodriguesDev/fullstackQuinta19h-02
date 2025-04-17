@@ -1,0 +1,16 @@
+<script>
+  const pessoas = ["João", "José", "Maria", "Pedro", "Raphael", "Fernanda", "Marcia", "Rafael", "Ana", "Carlos"];
+
+  console.log(pessoas.length);
+
+  pessoas.push("Joaquim");
+  pessoas.pop();
+
+  pessoas.unshift("Sérgio");
+  pessoas.shift();
+
+  for (let i = 0; i < pessoas.length; i++)  {
+    document.write(`Pessoa ${i + 1}: ${pessoas[i]}<br>`);
+  }
+
+</script>

@@ -1,0 +1,23 @@
+<script>
+
+  const notas = [];
+
+  const qtdNotas = Number(prompt("Quantidade de notas:"))
+
+  for (let i = 0; i < qtdNotas; i++) {
+    let nota = Number(prompt(`Nota ${i + 1}:`));
+    notas.push(nota);
+  }
+
+  const somatoria = notas.reduce((acc, nota) => {
+    return acc + nota;
+  })
+
+  const media = somatoria / notas.length;
+
+  // document.write((somatoria / notas.length).toFixed(2));
+
+  document.write(`A média das notas é: ${media.toFixed(2)}`);
+
+
+</script>

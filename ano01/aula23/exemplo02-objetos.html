@@ -1,0 +1,18 @@
+<script>
+  // Teste básico para verificar se document.write está funcionando
+
+  const pessoas = [
+    { nome: "João", idade: 32, pontos: 0 },
+    { nome: "Maria", idade: 29, pontos: 0 },
+    { nome: "Pedro", idade: 25, pontos: 0 }
+  ];
+
+  pessoas
+    .map(pessoa => pessoa.pontos += 10)
+    .filter(pessoa => pessoa.idade < 30)
+
+  pessoas.forEach(pessoa => {
+    document.write(`Nome: ${pessoa.nome} | Pontos: ${pessoa.pontos} <br>`);
+  });
+
+</script>

@@ -1,0 +1,42 @@
+<script>
+//   let num1 = 12;
+//   let num2 = 10;
+  
+//   let soma = num1 + num2;
+//   let subtracao = num1 - num2;
+//   let multiplicacao = num1 * num2;
+//   let divisao = num1 / num2;
+//   let modulo = num1 % num2;
+
+  let num1 = Number(prompt("Digite primeiro número?"));
+  let num2 = Number(prompt("Digite segundo número?"));
+  let operador = prompt("Digite um operador(+ - * / %)?");
+  
+  const somar = (n1, n2) => n1 + n2;
+  const subtrair = (n1, n2) => n1 - n2;
+  const multiplicar = (n1, n2) => n1 * n2;
+  const dividir = (n1, n2) => n1 / n2;
+  const calcularModulo = (n1, n2) => n1 % n2;
+  
+  switch (operador) {
+    case "+":
+      document.write(somar(num1, num2));
+      break;
+    case "-":
+      document.write(subtrair(num1, num2));
+      break;
+    case "*":
+      document.write(multiplicar(num1, num2));
+      break;
+    case "/":
+      document.write(dividir(num1, num2));
+      break;
+    case "%":
+      document.write(calcularModulo(num1, num2));
+      break;
+    default:
+      document.write("Operador inválido");
+  }
+  
+
+</script>

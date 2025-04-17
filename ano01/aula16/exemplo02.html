@@ -1,0 +1,31 @@
+<script>
+  let num1 = Number(prompt("Qual o primeiro número?"));
+  let num2 = Number(prompt("Qual o segundo número?"));
+
+  function somar (n1, n2) {
+    let result = n1 + n2;
+    document.write("<br>" + result);
+  }
+
+  function subtrair (n1, n2) {
+    let result = n1 - n2;
+    document.write("<br>" + result);
+  }
+
+  function multiplicar (n1, n2) {
+    let result = n1 * n2;
+    document.write("<br>" + result);
+  }
+
+  function dividir (n1, n2) {
+    let result = n1 / n2;
+    document.write("<br>" + result.toFixed(2));
+  }
+
+  // Chamando funções
+  somar(num1, num2);
+  subtrair(num1, num2);
+  multiplicar(num1, num2);
+  dividir(num1, num2);
+
+</script>

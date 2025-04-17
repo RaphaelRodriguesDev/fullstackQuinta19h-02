@@ -1,0 +1,15 @@
+Algoritmos
+Um algoritmo é uma sequência de passos lógicos e bem definidos para resolver
+um problema ou realizar uma determinada ação. Na programação, os algoritmos
+são implementados por meio de código. Eles são a base fundamental para
+resolver problemas computacionais de forma eficiente.
+Exemplo: Algoritmo para calcular a média de três números
+Um exemplo simples de algoritmo em JavaScript para calcular a média de três
+números é:
+let num1 = 5;
+let num2 = 8;
+let num3 = 6;
+let media = (num1 + num2 + num3) / 3;
+console.log("A média dos números é: " + media);
+Este algoritmo simplesmente soma os três números e divide o resultado por 3
+para obter a média.

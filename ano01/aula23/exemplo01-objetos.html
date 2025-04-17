@@ -1,0 +1,40 @@
+<script>
+
+const pessoas = [
+  {
+    nome: "João",
+    idade: 32,
+  }, 
+  {
+    nome: "Maria",
+    idade: 29,
+  }, 
+  {
+    nome: "Pedro",
+    idade: 25,
+  }
+];
+
+const caneta = {
+  id: 1,
+  tipo: "caneta",
+  cor: "azul",
+  tamanho: 0.5,
+  marca: "BIC",
+}
+
+// document.write(caneta.tipo);
+// document.write(caneta["cor"]);
+
+// for ( atributo in caneta ) {
+//   document.write(`<br> ${atributo}: ${caneta[atributo]} `);
+// }
+
+// document.write("<br>" + pessoas);
+document.write("<hr>");
+
+pessoas.forEach( pessoa => {
+  document.write(`<br>Nome: ${pessoa.nome} | Idade: ${pessoa.idade}`);
+})
+
+</script>
