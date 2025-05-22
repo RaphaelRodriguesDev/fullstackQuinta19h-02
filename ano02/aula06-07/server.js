@@ -30,6 +30,27 @@ const produtos = [
 
 app.get("/produtos", (req, res) =>{
   res.json(produtos);
-})
+});
 
-app.listen(port, () => console.log(`rodando no link ${URL}`))
+app.get("/produtos/:id", (req, res) => {
+  const id = Number(req.params.id);
+  const produto = produtos.find(el => el.id === id);
+
+  if (produto) {
+    res.json(produto);
+  } else {
+    res.status(404).json({
+      erro: "Produto não encontrado"
+    });
+  }
+});
+
+app.post("/produtos", (req, res) => {
+  const { nome, preco } = req.body;
+  const id = produtos.length + 1;
+  const novoProduto = { id, nome, preco };
+  produtos.push(novoProduto);
+  res.status(201).json(novoProduto);
+});
+
+app.listen(port, () => console.log(`rodando no link ${URL}`));
