@@ -53,4 +53,23 @@ app.post("/produtos", (req, res) => {
   res.status(201).json(novoProduto);
 });
 
+app.put("/produtos/:id", async (req, res) => {
+  const id = Number(req.params.id);
+  const {nome, preco} = req.body;
+  const index = produtos.findIndex(el => el.id === id);
+
+  if (index !== -1) {
+    produtos[index] = { ...produtos[index], nome, preco };
+    res.json(produtos[index]);
+  } else {
+    res.status(404).json({ error: "Product not found" });
+  }
+
+  app.delete("/produtos/:id", (req, res) => {
+    let id = Number(req.params.id);
+    produtos = produtos.filter(el => el.id !== id);
+    res.sendStatus(204);
+  });
+});
+
 app.listen(port, () => console.log(`rodando no link ${URL}`));
