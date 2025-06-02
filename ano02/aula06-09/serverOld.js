@@ -78,4 +78,8 @@ app.delete("/produtos/:id", (req, res) => {
   }
 });
 
-app.listen(port, () => console.log(`rodando no link ${URL}`));
+app.listen(port, '127.0.0.1', () => {
+  console.log(`Servidor rodando em ${URL}`);
+  console.log(`Teste com http://localhost:${port}/produtos`);
+  console.log(`Teste com http://127.0.0.1:${port}/produtos`);
+});
