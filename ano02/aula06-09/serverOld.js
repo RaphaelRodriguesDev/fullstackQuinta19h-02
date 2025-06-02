@@ -67,9 +67,15 @@ app.put("/produtos/:id", async (req, res) => {
 });
 
 app.delete("/produtos/:id", (req, res) => {
-  let id = Number(req.params.id);
-  produtos = produtos.filter(el => el.id !== id);
-  res.sendStatus(204);
+  const id = Number(req.params.id);
+  const index = produtos.findIndex(el => el.id === id);
+
+  if (index !== -1) {
+    produtos.splice(index, 1); // Remove o elemento no índice encontrado
+    res.sendStatus(204);
+  } else {
+    res.status(404).json({ error: "Produto não encontrado" });
+  }
 });
 
 app.listen(port, () => console.log(`rodando no link ${URL}`));

@@ -6,6 +6,7 @@ dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 3333;
+const URL = `http://127.0.0.1:${port}`;
 
 app.use(express.json());
 
