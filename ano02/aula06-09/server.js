@@ -64,7 +64,7 @@ app.get("/produtos/:id", async (req, res) => {
 });
 
 app.post("/produtos", async (req, res) => {
-  
+  const { nome, preco } = req.body; // TODO - CORREÇÃO DO CÓDIGO
   const produto = await Produto.create({ nome, preco });
   res.status(201).json(produto);
 });
