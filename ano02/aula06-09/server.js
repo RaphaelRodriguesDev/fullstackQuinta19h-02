@@ -52,7 +52,7 @@ app.get("/produtos", async (req, res) => {
 
 app.get("/produtos/:id", async (req, res) => {
   const id = Number(req.params.id);
-  const produto = Produto.findOne({ where: { id } });
+  const produto = await Produto.findOne({ where: { id } });
 
   if (produto) {
     res.json(produto);
@@ -72,7 +72,7 @@ app.post("/produtos", async (req, res) => {
 app.put("/produtos/:id", async (req, res) => {
   const id = Number(req.params.id);
   const { nome, preco } = req.body;
-  const produto = Produto.findOne({ where: { id } });
+  const produto = await Produto.findOne({ where: { id } });
 
   if (produto) {
     produto.nome = nome;
@@ -88,7 +88,7 @@ app.put("/produtos/:id", async (req, res) => {
 
 app.delete("/produtos/:id", async (req, res) => {
   const id = Number(req.params.id);
-  const produto = Produto.findOne({ where: { id } });
+  const produto = await Produto.findOne({ where: { id } });
 
   if (produto) {
     await produto.destroy();
