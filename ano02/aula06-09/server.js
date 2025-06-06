@@ -46,13 +46,13 @@ sequelize.sync();
 
 // API Rotes
 app.get("/produtos", async (req, res) => {
-  const produtos = await Produto.findAll();
+  const produtos = await Produto.findAll(); // TODO - ADICIONANDO AWAIT
   res.json(produtos);
 });
 
 app.get("/produtos/:id", async (req, res) => {
   const id = Number(req.params.id);
-  const produto = await Produto.findOne({ where: { id } });
+  const produto = await Produto.findOne({ where: { id } }); // TODO - ADICIONANDO AWAIT
 
   if (produto) {
     res.json(produto);
@@ -65,14 +65,14 @@ app.get("/produtos/:id", async (req, res) => {
 
 app.post("/produtos", async (req, res) => {
   const { nome, preco } = req.body; // TODO - CORREÇÃO DO CÓDIGO
-  const produto = await Produto.create({ nome, preco });
+  const produto = await Produto.create({ nome, preco }); // TODO - ADICIONANDO AWAIT
   res.status(201).json(produto);
 });
 
 app.put("/produtos/:id", async (req, res) => {
   const id = Number(req.params.id);
   const { nome, preco } = req.body;
-  const produto = await Produto.findOne({ where: { id } });
+  const produto = await Produto.findOne({ where: { id } }); // TODO - ADICIONANDO AWAIT
 
   if (produto) {
     produto.nome = nome;
@@ -88,7 +88,7 @@ app.put("/produtos/:id", async (req, res) => {
 
 app.delete("/produtos/:id", async (req, res) => {
   const id = Number(req.params.id);
-  const produto = await Produto.findOne({ where: { id } });
+  const produto = await Produto.findOne({ where: { id } }); // TODO - ADICIONANDO AWAIT
 
   if (produto) {
     await produto.destroy();
