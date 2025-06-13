@@ -1,6 +1,7 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const { Sequelize } = require("sequelize");
+const cors = require("cors");
 
 dotenv.config();
 
@@ -9,6 +10,7 @@ const port = process.env.PORT || 3333;
 const URL = `http://127.0.0.1:${port}`;
 
 app.use(express.json());
+app.use(cors());
 
 //Initialize Sequelize
 const sequelize = new Sequelize(

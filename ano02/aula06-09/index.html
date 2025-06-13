@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Produtos</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 20px;
+            text-align: center;
+        }
+
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 8px;
+        }
+
+        th {
+            background: #eee;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Produtos</h1>
+    <table id="tabela">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Preço</th>
+            </tr>
+        </thead>
+        <tbody id="corpo"></tbody>
+    </table>
+    <script>
+        async function carregarProdutos() {
+            try {
+                const resposta = await fetch('http://127.0.0.1:4444/produtos');
+                const produtos = await resposta.json();
+                const corpo = document.getElementById('corpo');
+                for (const produto of produtos) {
+                    corpo.innerHTML += `
+                        <tr>
+                            <td>${produto.id}</td>
+                            <td>${produto.nome}</td>
+                            <td>R$${produto.preco.toFixed(2)}</td>
+                        </tr>
+                    `;
+                }
+            } catch {
+                alert('Erro ao carregar produtos');
+            }
+        }
+        carregarProdutos();
+    </script>
+</body>
+
+</html>
