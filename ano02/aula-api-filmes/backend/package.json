@@ -5,7 +5,10 @@
   "main": "app.js",
   "scripts": {
     "dev": "nodemon app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "criar-banco": "npx sequelize db:create",
+    "criar-migration": "npx sequelize migration:create --name=criar-tabela-xyz",
+    "executar-migration": "npx sequelize db:migrate",
+    "desfazer-migration": "npx sequelize db:migrate:undo"
   },
   "author": "Raphael Amorim",
   "license": "ISC",
