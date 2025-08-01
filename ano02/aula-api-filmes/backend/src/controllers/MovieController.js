@@ -16,6 +16,7 @@ module.exports = {
   async show(req, res) {
     try {
       const movie = await Movie.findOne({ where: { id: req.params.id } });
+      return res.json(movie);
     } catch (err) {
       console.error("Erro na busca: ", err);
       return res.status(500).json({ erro: "Erro na busca" });
