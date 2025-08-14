@@ -11,7 +11,7 @@ class Movie extends Model {
       {
         sequelize: connection,
         schema: "public",
-        tableName: "moviesAula",
+        tableName: "movies",
         createdAt: "createdAt",
         updatedAt: "updatedAt",
         timestamps: true,
