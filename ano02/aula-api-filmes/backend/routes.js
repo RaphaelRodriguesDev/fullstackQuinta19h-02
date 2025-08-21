@@ -5,7 +5,7 @@ const routes = express.Router();
 routes.get("/movies", MovieController.list);
 routes.get("/movies/:id", MovieController.show);
 routes.post("/movies", MovieController.create);
-routes.put("/movies", MovieController.update);
-routes.delete("/movies", MovieController.delete);
+routes.put("/movies/:id", MovieController.update);
+routes.delete("/movies/:id", MovieController.delete);
 
 module.exports = routes;
