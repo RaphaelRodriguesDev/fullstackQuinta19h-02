@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editar Filme - API Filmes</title>
+    <link rel="stylesheet" href="../src/css/style.css" />
+    <link rel="stylesheet" href="../src/css/form-filmes.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <h1>Filmes API</h1>
+        <ul>
+          <li><a href="../index.html">Filmes</a></li>
+          <li><a href="./cadastro.html">Adicionar Filme</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <form id="edit-form">
+        <label for="title">Título do Filme:</label>
+        <input type="text" id="title" name="title" required />
+
+        <label for="poster">URL do Poster:</label>
+        <input type="url" id="poster" name="poster" />
+
+        <label for="overview">Sinopse:</label>
+        <textarea id="overview" name="overview" rows="5"></textarea>
+
+        <button type="submit">Salvar Alterações</button>
+      </form>
+    </main>
+    <footer>
+      <p>© 2023 API Filmes</p>
+    </footer>
+    <script src="../src/js/editar.js"></script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/css/style.css" />
+    <link rel="stylesheet" href="../src/css/form-filmes.css" />
+    <title>Cadastro de Filmes</title>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <h1>Filmes API</h1>
+        <ul>
+          <li><a href="../index.html">Filmes</a></li>
+          <li><a href="./cadastro.html">Adicionar Filme</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <form id="movie-form">
+        <label for="title">Título do Filme:</label>
+        <input type="text" id="title" name="title" required />
+
+        <label for="poster">URL do Poster:</label>
+        <input type="url" id="poster" name="poster" required />
+
+        <label for="overview">Sinopse:</label>
+        <textarea id="overview" name="overview" rows="4" required></textarea>
+
+        <button type="submit">Cadastrar Filme</button>
+      </form>
+    </main>
+    <footer>
+      <p>&copy; 2023 API Filmes</p>
+    </footer>
+    <script src="../src/js/cadastro.js"></script>
+  </body>
+</html>
