@@ -161,7 +161,7 @@ Curso de Fullstack Turma Quinta(Logica, frontend, backend, banco de dados)
   "prettier.arrowParens": "avoid",
   "editor.formatOnSave": true,
   "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -275,7 +275,7 @@ Curso de Fullstack Turma Quinta(Logica, frontend, backend, banco de dados)
   },
   "bitoAI.codeCompletion.setAutoCompletionTriggerLogic": 250,
   "java.debug.settings.console": "internalConsole",
-  "window.zoomLevel": 2,
+  "window.zoomLevel": 1,
   "codeium.enableConfig": {
     "*": false,
     "javascript": false
